@@ -1,9 +1,10 @@
 from telegram.ext import Updater, CommandHandler, CallbackContext
 
 def start_bot(update:Updater, context: CallbackContext):
-	mytext = """Hello user
+	print(update)
+	mytext = """Hello {}
 
-	I have only /start comand: ;)"""
+	I have only /start comand: ;)""".format(update.message.chat.first_name)
 	update.message.reply_text(mytext)
 
 def main():
