@@ -1,3 +1,4 @@
 pass.txt
 *.log
 settings.py
+__pycache__/
